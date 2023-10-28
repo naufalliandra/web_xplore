@@ -2102,6 +2102,7 @@ blockquote p {
 
 .course_card {
   overflow: hidden;
+  height: 450px;
   position: relative;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -3168,7 +3169,7 @@ blockquote p {
   left: 0;
   right: 0;
   z-index: 99;
-  padding: 44px 0;
+  padding: 20px 0;
   position: absolute;
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
@@ -3177,7 +3178,7 @@ blockquote p {
   max-width: 1430px;
 }
 .site_header.sticky {
-  padding: 10px 0;
+  padding: 20px 0;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.96);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -4521,7 +4522,7 @@ Responsive For Mobile & Tablet Devices
 ================================================== */
 /* Media Screen 680px - Start
 ================================================== */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 475px) {
   .course_card.list_layout {
     display: block;
   }
