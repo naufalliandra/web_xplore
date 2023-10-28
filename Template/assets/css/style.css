@@ -186,6 +186,30 @@ hr {
 .row {
   margin: -15px;
 }
+.row_html {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color: rgba(0, 94, 248, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+  
+
+}
+.row_css {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color: rgba(85, 81, 252, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+}
+.row_js {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color:rgba(255, 134, 147, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+}
+
 
 .col {
   -webkit-box-flex: unset;
@@ -521,7 +545,7 @@ hr {
   top: 50%;
   font-size: 14px;
   position: absolute;
-  color: #F7FF62;
+  color: #CC510D;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -703,7 +727,7 @@ ol[type="1"] > li:not(:last-child) {
   background-color: #F6F6F6;
 }
 .item_category_list a:hover {
-  background-color: #FFD32B;
+  background-color: #C9E94A;
 }
 
 .meta_info_list {
@@ -2100,50 +2124,76 @@ blockquote p {
 .course_small_layout:hover .item_title {
   text-decoration: underline;
 }
-
-.course_card {
+.row_html .course_card{
   overflow: hidden;
   position: relative;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  padding: 28px 28px 32px;
   border-radius: 8px;
-  background-color: #ffffff;
-  border: 2px solid #D2D2D2;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: rgba(0, 94, 248, 0.5);
 }
-.course_card:hover {
+
+.row_css .course_card{
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 8px;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: rgba(85, 81, 252, 0.5);
+}
+
+.row_js .course_card{
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 8px;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: #F36F56;
+}
+
+.row_html .course_card:hover {
   z-index: 1;
-  border-color: #1F1D0D;
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
-  -webkit-box-shadow: 10px 10px 0 0 #1F1D0D;
-          box-shadow: 10px 10px 0 0 #1F1D0D;
+          box-shadow: 10px 10px 0 0  rgba(0, 94, 248,100% );
+}
+.row_css .course_card:hover {
+  z-index: 1;
+  -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+          box-shadow: 10px 10px 0 0  rgba(85, 81, 252,100%);
+}
+.row_js .course_card:hover {
+  z-index: 1;
+  -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+          box-shadow: 10px 10px 0 0  #f12e07;
 }
 .course_card .item_image {
   margin-bottom: 23px;
 }
+
 .course_card .item_image > a {
   display: block;
   overflow: hidden;
   position: relative;
   border-radius: 8px;
 }
+
 .course_card .item_image img {
-  width: 100%;
+  width: 350px; /* Lebar gambar 100% dari wadahnya */
+  height: 200px; /* Tinggi gambar 100% dari wadahnya */
+  object-fit: cover; /* Atur gambar untuk mengisi wadah dengan mempertahankan rasio aspek */
   display: block;
 }
-.course_card .item_price .sale_price {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #1F1D0D;
-  font-family: "Barlow", sans-serif;
-}
-.course_card .item_price .remove_price {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-}
+
+
 .course_card .item_title {
   margin: 0;
   padding: 10px 0 24px;
@@ -2152,7 +2202,7 @@ blockquote p {
   font-size: 22px;
   font-weight: 700;
   line-height: 26px;
-  color: #1F1D0D;
+  color: #000;
 }
 .course_card .item_title > a:hover {
   opacity: 0.7;
@@ -2451,8 +2501,8 @@ blockquote p {
   border-color: #1F1D0D;
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
-  -webkit-box-shadow: 10px 10px 0 0 #1F1D0D;
-          box-shadow: 10px 10px 0 0 #1F1D0D;
+  -webkit-box-shadow: 10px 10px 0 0 #b39f10;
+          box-shadow: 10px 10px 0 0 #22a166;
 }
 .event_card .item_image {
   display: block;
@@ -2460,6 +2510,7 @@ blockquote p {
 }
 .event_card .item_content {
   padding: 30px;
+  color: #C9E94A;
 }
 .event_card .item_title {
   font-size: 22px;
@@ -2467,7 +2518,7 @@ blockquote p {
   margin-bottom: 20px;
 }
 .event_card .item_title > a {
-  color: #1F1D0D;
+  color: #b62626;
 }
 .event_card .item_title > a:hover {
   text-decoration: underline;
@@ -2477,7 +2528,7 @@ blockquote p {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  color: #1F1D0D;
+  color: #beaa14;
 }
 
 /* 3.4 - Event - End
@@ -3449,6 +3500,7 @@ blockquote p {
   font-weight: 800;
   line-height: 68px;
   margin-bottom: 10px;
+  color: #1B46A4;
 }
 
 .page_description {
@@ -4820,15 +4872,15 @@ Responsive For Mobile & Tablet Devices
 }
 /* Media Screen 425px - End
 ================================================== */
-/* Media Screen 375px - Start
+/* MODUL AJAR
 ================================================== */
 @media screen and (max-width: 375px) {
-  .course_card .item_content .d-flex {
+  /* .course_card .item_content .d-flex {
     display: block !important;
   }
   .course_card .item_price {
     margin-top: 10px;
-  }
+  } */
   .banner_image_2 .image_wrap_1 {
     margin-bottom: -540px;
   }
