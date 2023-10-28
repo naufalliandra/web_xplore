@@ -467,9 +467,8 @@ hr {
 }
 
 .btn_primary {
-  color: #1F1D0D;
-  border-color: #F7FF62;
-  background-color: #F7FF62;
+  color: #000000;
+  background-color: #FFB20D;
 }
 .btn_primary:hover {
   color: #1F1D0D;
@@ -764,12 +763,14 @@ ol[type="1"] > li:not(:last-child) {
 ================================================== */
 .section_heading {
   margin-bottom: 40px;
+  text-align: center;
 }
 .section_heading .heading_text {
   font-size: 45px;
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 24px;
+  color: #1B46A4;
 }
 .section_heading .heading_description {
   font-size: 16px;
@@ -1820,13 +1821,13 @@ blockquote p {
   font-size: 65px;
   font-weight: 800;
   line-height: 68px;
-  color: #ffffff;
+  color: #1B46A4;
   margin-bottom: 20px;
 }
 .hero_banner .banner_description {
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: #646464;
   margin-bottom: 40px;
 }
 .hero_banner .banner_btns_group {
@@ -1859,8 +1860,8 @@ blockquote p {
 }
 .hero_banner.style_1 .content_wrap {
   padding: 100px;
-  background-color: #1F1D0D;
-  border-radius: 8px;
+  background-color: #FBFFE3;
+  /* border-radius: 8px; */
 }
 .hero_banner.style_1 .banner_description {
   padding-right: 190px;
@@ -3219,18 +3220,19 @@ blockquote p {
   left: 0;
   right: 0;
   z-index: 99;
-  padding: 44px 0;
+  padding: 20px 0;
   position: absolute;
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
+  background-color: #CC510D;
 }
 .site_header .container {
   max-width: 1430px;
 }
 .site_header.sticky {
-  padding: 10px 0;
+  padding: 20px 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: #CC510D;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   -webkit-box-shadow: 0 2px 6px 0 rgba(16, 18, 19, 0.08);
@@ -3253,7 +3255,7 @@ blockquote p {
   font-size: 17px;
   font-weight: 500;
   line-height: 23px;
-  color: #1F1D0D;
+  color: #d9d9d9;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3267,7 +3269,7 @@ blockquote p {
 }
 .main_menu_list > li:hover > a, .main_menu_list > li.active > a {
   color: #1F1D0D;
-  background-color: #F6F6F6;
+  /* background-color: #F6F6F6; */
 }
 .main_menu_list > li:hover > a:after {
   -webkit-transform: rotateX(-180deg);
@@ -3379,13 +3381,13 @@ blockquote p {
 ================================================== */
 .site_footer {
   color: #C8C8C8;
-  background-color: #1F1D0D;
+  background-color: #CC510D;
 }
 .site_footer .site_logo {
   margin-bottom: 35px;
 }
 .site_footer .footer_widget_area {
-  padding: 130px 0 108px;
+  padding: 50px 0 20px;
 }
 .site_footer p {
   font-size: 14px;
@@ -3431,7 +3433,7 @@ blockquote p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #d9d9d9;
 }
 .copyright_widget .copyright_text a {
   color: #C8C8C8;
