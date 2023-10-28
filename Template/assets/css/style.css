@@ -186,6 +186,30 @@ hr {
 .row {
   margin: -15px;
 }
+.row_html {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color: rgba(0, 94, 248, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+  
+
+}
+.row_css {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color: rgba(85, 81, 252, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+}
+.row_js {
+  padding: 28px 28px 32px;
+  border-radius: 8px;
+  background-color:rgba(255, 134, 147, 0.3);
+  display: flex;
+  margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
+}
+
 
 .col {
   -webkit-box-flex: unset;
@@ -443,9 +467,8 @@ hr {
 }
 
 .btn_primary {
-  color: #1F1D0D;
-  border-color: #F7FF62;
-  background-color: #F7FF62;
+  color: #000000;
+  background-color: #FFB20D;
 }
 .btn_primary:hover {
   color: #1F1D0D;
@@ -522,7 +545,7 @@ hr {
   top: 50%;
   font-size: 14px;
   position: absolute;
-  color: #F7FF62;
+  color: #CC510D;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -704,7 +727,7 @@ ol[type="1"] > li:not(:last-child) {
   background-color: #F6F6F6;
 }
 .item_category_list a:hover {
-  background-color: #FFD32B;
+  background-color: #C9E94A;
 }
 
 .meta_info_list {
@@ -740,12 +763,14 @@ ol[type="1"] > li:not(:last-child) {
 ================================================== */
 .section_heading {
   margin-bottom: 40px;
+  text-align: center;
 }
 .section_heading .heading_text {
   font-size: 45px;
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 24px;
+  color: #1B46A4;
 }
 .section_heading .heading_description {
   font-size: 16px;
@@ -1796,13 +1821,13 @@ blockquote p {
   font-size: 65px;
   font-weight: 800;
   line-height: 68px;
-  color: #ffffff;
+  color: #1B46A4;
   margin-bottom: 20px;
 }
 .hero_banner .banner_description {
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: #646464;
   margin-bottom: 40px;
 }
 .hero_banner .banner_btns_group {
@@ -1835,8 +1860,8 @@ blockquote p {
 }
 .hero_banner.style_1 .content_wrap {
   padding: 100px;
-  background-color: #1F1D0D;
-  border-radius: 8px;
+  background-color: #FBFFE3;
+  /* border-radius: 8px; */
 }
 .hero_banner.style_1 .banner_description {
   padding-right: 190px;
@@ -2099,51 +2124,77 @@ blockquote p {
 .course_small_layout:hover .item_title {
   text-decoration: underline;
 }
-
-.course_card {
+.row_html .course_card{
   overflow: hidden;
   height: 450px;
   position: relative;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  padding: 28px 28px 32px;
   border-radius: 8px;
-  background-color: #ffffff;
-  border: 2px solid #D2D2D2;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: rgba(0, 94, 248, 0.5);
 }
-.course_card:hover {
+
+.row_css .course_card{
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 8px;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: rgba(85, 81, 252, 0.5);
+}
+
+.row_js .course_card{
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 8px;
+  padding: 28px; /* Padding yang sama untuk semua card */
+  color: #000000;
+  background-color: #F36F56;
+}
+
+.row_html .course_card:hover {
   z-index: 1;
-  border-color: #1F1D0D;
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
-  -webkit-box-shadow: 10px 10px 0 0 #1F1D0D;
-          box-shadow: 10px 10px 0 0 #1F1D0D;
+          box-shadow: 10px 10px 0 0  rgba(0, 94, 248,100% );
+}
+.row_css .course_card:hover {
+  z-index: 1;
+  -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+          box-shadow: 10px 10px 0 0  rgba(85, 81, 252,100%);
+}
+.row_js .course_card:hover {
+  z-index: 1;
+  -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+          box-shadow: 10px 10px 0 0  #f12e07;
 }
 .course_card .item_image {
   margin-bottom: 23px;
 }
+
 .course_card .item_image > a {
   display: block;
   overflow: hidden;
   position: relative;
   border-radius: 8px;
 }
+
 .course_card .item_image img {
-  width: 100%;
+  width: 350px; /* Lebar gambar 100% dari wadahnya */
+  height: 200px; /* Tinggi gambar 100% dari wadahnya */
+  object-fit: cover; /* Atur gambar untuk mengisi wadah dengan mempertahankan rasio aspek */
   display: block;
 }
-.course_card .item_price .sale_price {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #1F1D0D;
-  font-family: "Barlow", sans-serif;
-}
-.course_card .item_price .remove_price {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-}
+
+
 .course_card .item_title {
   margin: 0;
   padding: 10px 0 24px;
@@ -2152,7 +2203,7 @@ blockquote p {
   font-size: 22px;
   font-weight: 700;
   line-height: 26px;
-  color: #1F1D0D;
+  color: #000;
 }
 .course_card .item_title > a:hover {
   opacity: 0.7;
@@ -2451,8 +2502,8 @@ blockquote p {
   border-color: #1F1D0D;
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
-  -webkit-box-shadow: 10px 10px 0 0 #1F1D0D;
-          box-shadow: 10px 10px 0 0 #1F1D0D;
+  -webkit-box-shadow: 10px 10px 0 0 #b39f10;
+          box-shadow: 10px 10px 0 0 #22a166;
 }
 .event_card .item_image {
   display: block;
@@ -2460,6 +2511,7 @@ blockquote p {
 }
 .event_card .item_content {
   padding: 30px;
+  color: #C9E94A;
 }
 .event_card .item_title {
   font-size: 22px;
@@ -2467,7 +2519,7 @@ blockquote p {
   margin-bottom: 20px;
 }
 .event_card .item_title > a {
-  color: #1F1D0D;
+  color: #b62626;
 }
 .event_card .item_title > a:hover {
   text-decoration: underline;
@@ -2477,7 +2529,7 @@ blockquote p {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  color: #1F1D0D;
+  color: #beaa14;
 }
 
 /* 3.4 - Event - End
@@ -3173,6 +3225,7 @@ blockquote p {
   position: absolute;
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
+  background-color: #CC510D;
 }
 .site_header .container {
   max-width: 1430px;
@@ -3180,7 +3233,7 @@ blockquote p {
 .site_header.sticky {
   padding: 20px 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: #CC510D;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   -webkit-box-shadow: 0 2px 6px 0 rgba(16, 18, 19, 0.08);
@@ -3203,7 +3256,7 @@ blockquote p {
   font-size: 17px;
   font-weight: 500;
   line-height: 23px;
-  color: #1F1D0D;
+  color: #d9d9d9;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3217,7 +3270,7 @@ blockquote p {
 }
 .main_menu_list > li:hover > a, .main_menu_list > li.active > a {
   color: #1F1D0D;
-  background-color: #F6F6F6;
+  /* background-color: #F6F6F6; */
 }
 .main_menu_list > li:hover > a:after {
   -webkit-transform: rotateX(-180deg);
@@ -3329,13 +3382,13 @@ blockquote p {
 ================================================== */
 .site_footer {
   color: #C8C8C8;
-  background-color: #1F1D0D;
+  background-color: #CC510D;
 }
 .site_footer .site_logo {
   margin-bottom: 35px;
 }
 .site_footer .footer_widget_area {
-  padding: 130px 0 108px;
+  padding: 50px 0 20px;
 }
 .site_footer p {
   font-size: 14px;
@@ -3381,7 +3434,7 @@ blockquote p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #d9d9d9;
 }
 .copyright_widget .copyright_text a {
   color: #C8C8C8;
@@ -3448,6 +3501,7 @@ blockquote p {
   font-weight: 800;
   line-height: 68px;
   margin-bottom: 10px;
+  color: #1B46A4;
 }
 
 .page_description {
@@ -4819,15 +4873,15 @@ Responsive For Mobile & Tablet Devices
 }
 /* Media Screen 425px - End
 ================================================== */
-/* Media Screen 375px - Start
+/* MODUL AJAR
 ================================================== */
 @media screen and (max-width: 375px) {
-  .course_card .item_content .d-flex {
+  /* .course_card .item_content .d-flex {
     display: block !important;
   }
   .course_card .item_price {
     margin-top: 10px;
-  }
+  } */
   .banner_image_2 .image_wrap_1 {
     margin-bottom: -540px;
   }
