@@ -142,10 +142,12 @@ a {
   text-decoration: none;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  color: #ffffff;
 }
 a:active, a:focus, a:hover, a:visited {
   outline: 0;
   text-decoration: none;
+  color: #ffffff;
 }
 
 button {
@@ -161,10 +163,15 @@ button:focus {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-weight: 700;
   color: #1F1D0D;
   font-family: "Barlow", sans-serif;
+}
+
+h2{
+  color: #1B46A4;
+
 }
 
 hr {
@@ -837,7 +844,7 @@ blockquote p {
   display: none;
 }
 .slick-dots li:hover button, .slick-dots li.slick-active button {
-  opacity: 1;
+  opacity: 2;
 }
 
 .slick-dotted.slick-slider {
@@ -1810,6 +1817,10 @@ blockquote p {
 ================================================== */
 /* 3.1 - Banner - Start
 ================================================== */
+.motivation_banner{
+  background-image: url(../images/bg_nelson_mandela.png)
+}
+
 .hero_banner .banner_small_title {
   font-size: 13px;
   font-weight: 700;
@@ -1861,6 +1872,7 @@ blockquote p {
 .hero_banner.style_1 .content_wrap {
   padding: 100px;
   background-color: #FBFFE3;
+  background-image: url(../images/texturebg.png);
   /* border-radius: 8px; */
 }
 .hero_banner.style_1 .banner_description {
@@ -2126,6 +2138,7 @@ blockquote p {
 }
 .row_html .course_card{
   overflow: hidden;
+  height: 450px;
   position: relative;
   -webkit-transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -3268,8 +3281,7 @@ blockquote p {
   border-radius: 8px;
 }
 .main_menu_list > li:hover > a, .main_menu_list > li.active > a {
-  color: #1F1D0D;
-  /* background-color: #F6F6F6; */
+  color: #ffffff;
 }
 .main_menu_list > li:hover > a:after {
   -webkit-transform: rotateX(-180deg);
@@ -3375,12 +3387,29 @@ blockquote p {
   max-width: 1200px;
 }
 
+.profile-button {
+  background-color: #CC510D;
+  border: solid white;
+  padding: 15px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px; 
+  height: 37px; 
+}
+
+.profile-button i {
+  font-size: 20px; 
+}
+
+
 /* 4.1 - Site Header - End
 ================================================== */
 /* 4.2 - Site Footer - Start
 ================================================== */
 .site_footer {
-  color: #C8C8C8;
+  color: #ffffff;
   background-color: #CC510D;
 }
 .site_footer .site_logo {
@@ -3433,10 +3462,10 @@ blockquote p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid #ffffff;
 }
 .copyright_widget .copyright_text a {
-  color: #C8C8C8;
+  color: #ffffff;
 }
 .copyright_widget .copyright_text a:hover {
   color: #ffffff;
@@ -4202,6 +4231,8 @@ Responsive For Mobile & Tablet Devices
   .section_heading .heading_text {
     font-size: 38px;
     line-height: 42px;
+    color: #1B46A4;
+
   }
   .advertisement_section .images_group .shape_img_1 {
     left: -78px;
@@ -4575,7 +4606,7 @@ Responsive For Mobile & Tablet Devices
 ================================================== */
 /* Media Screen 680px - Start
 ================================================== */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 475px) {
   .course_card.list_layout {
     display: block;
   }
@@ -4861,6 +4892,8 @@ Responsive For Mobile & Tablet Devices
     font-size: 36px;
     line-height: 40px;
     margin-bottom: 18px;
+    color: #1B46A4;
+
   }
   .page_banner .content_wrapper {
     min-height: auto;
