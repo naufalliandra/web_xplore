@@ -35,6 +35,13 @@
     <!-- Custom - CSS Include -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.js"></script>
+
+
   </head>
 
 
@@ -102,16 +109,21 @@
         ================================================== -->
         <section class="page_banner">
           <div class="container">
-            <div class="content_wrapper">
+            <div class="content_wrapper" style="padding-top: -100px; padding-bottom: 100px;">
               <div class="row align-items-center">
                 <div class="col col-lg-7">
                   <ul class="breadcrumb_nav unordered_list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="course.html">Courses</a></li>
-                    <li>Course Details</li>
+                    <li>HTML</li>
                   </ul>
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <ul class="item_category_list unordered_list">
+                      <li><p href="#!">#HTML</p></li>
+                    </ul>
+                  </div>
                   <h1 class="page_title">
-                    Introduction to User Experience Design
+                    Belajar HTML #01: Text Formatting di HTML
                   </h1>
                   <ul class="meta_info_list unordered_list">
                     <li>
@@ -124,9 +136,9 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col col-lg-5">
+                <div class="col col-lg-5" style="padding-top: -50px;">
                   <div class="image_widget page_banner_image">
-                    <img src="assets/images/banner/page_banner_image_1.jpg" alt="Collab – Online Learning Platform">
+                    <img src="assets/images/html_textformatting.png">
                   </div>
                 </div>
               </div>
@@ -138,94 +150,75 @@
 
         <!-- Courses Info Section - Start
         ================================================== -->
-        <section class="details_section courses_info_section section_space_lg">
+        <section class="details_section motivation_banner courses_info_section section_space_md">
           <div class="container">
-            <div class="row">
-              <div class="col col-lg-6">
+            <div class="row text-align-right d-flex align-items-center">
+              <div class="col col-md-5">
+                <div class="section_heading">
+                  <h2 class="heading_text" style="margin-bottom: -35px;">
+                    Kamu Akan Mempelajari : 
+                  </h2>
+                </div>
+              </div>
+              <div class="col col-lg-3">
                 <div class="content_wrap">
-                  <div class="section_heading">
-                    <h2 class="heading_text mb-0">
-                      What You will Learn
-                    </h2>
-                  </div>
                   <ul class="info_list unordered_list_block">
                     <li>
                       <i class="fas fa-check"></i>
                       <span>
-                        Fermentum iaculis eu non diam phasellus vestibulum. Porta non pulvinar neque laoreet suspendisse. Justo nec ultrices dui sapien proin sed libero
+                        Membuat teks tebal
                       </span>
                     </li>
                     <li>
                       <i class="fas fa-check"></i>
                       <span>
-                        At consectetur lorem donec massa sapien. Pulvinar sapien et ligula ullamcorper malesuada proin
+                        Membuat teks miring
                       </span>
                     </li>
                     <li>
                       <i class="fas fa-check"></i>
                       <span>
-                        Quisque id diam vel quam elementum pulvinar. Eget felis eget nunc lobortis mattis aliquam faucibus purus.
+                        Membuat Garis Bawah pada Teks
+                      </span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>
+                        Membuat Teks Tercoret
+                      </span>
+                    </li>
+                </div>
+              </div>
+              <div class="col col-lg-3 ">
+                <div class="content_wrap">
+                  <ul class="info_list unordered_list_block" >
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>
+                        Membuat Pangkat di HTML
+                      </span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>
+                        Membuat Marker untuk Teks
+                      </span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>
+                        Teks Formatting untuk Komputer
+                      </span>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <span>
+                        Menggabungkan Format
                       </span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- <div class="col col-lg-3 col-md-6">
-                <div class="service_item" data-magnetic>
-                  <div class="item_icon">
-                    <img src="assets/images/icon/icon_desktop.svg" alt="Collab – Online Learning Platform">
-                  </div>
-                  <div class="item_content">
-                    <h3 class="item_title">Course Format</h3>
-                    <ul class="info_list unordered_list_block">
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>Video Tutorials</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>Checking the Task</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>Pulvinar sapien</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>Software</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6">
-                <div class="service_item" data-magnetic>
-                  <div class="item_icon">
-                    <img src="assets/images/icon/icon_calendar.svg" alt="Collab – Online Learning Platform">
-                  </div>
-                  <div class="item_content">
-                    <h3 class="item_title">Duration Course</h3>
-                    <ul class="info_list unordered_list_block">
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>3 Weeks</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>5 Video Tutorials</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>3 Hours of Consultations</span>
-                      </li>
-                      <li>
-                        <i class="fas fa-square"></i>
-                        <span>1.5 Hours Webinar</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div> -->
             </div>
           </div>
         </section>
@@ -235,118 +228,31 @@
         <!-- Course Details Section - Start
         ================================================== -->
         <section class="details_section course_details_section">
-          <div class="container">
-            <div class="row">
-              <div class="col col-lg-8 order-lg-last">
-                <div class="ps-lg-5">
+          <div class="container " style="padding-top: 50px;">
+            <div class="row d-block">
+              <div class="col-lg-15">
+                <div class="col-lg-10" style="padding: 10px; margin-left: 100px;">
                   <div class="section_heading">
                     <h2 class="heading_text">
-                      Course Content
+                      Membuat Teks Tebal
                     </h2>
+                  </div> 
+                  <p>
+                    Teks tebal biasanya digunakan untuk memberikan penegasan pada teks tertentu, misalnya seperti judul, subjudul, huruf penting, dll.
+                  </p>
+                  <p>
+                    Tag yang digunakan untuk membuat teks tebal di HTML adalah tag (bold) dan tag (strong). Kamu bebas mau pakai yang mana saja, hasilnya akan sama-sama tebal.
+                  </p>
+                  <div class="CodeMirror">
+                    <textarea id="code-editor" ></div></textarea>
                   </div>
+                  <p style="padding-top: 20px;">Hasilnya adalah : </p>
                   <div class="intro_video mb-4">
-                    <div class="video_wrap">
-                      <img src="assets/images/video/video_poster_2.jpg" alt="Collab – Online Learning Platform">
-                      <a class="video_play_btn popup_video" href="https://www.youtube.com/watch?v=7e90gBu4pas">
-                        <span class="icon"><i class="fas fa-play"></i></span>
-                      </a>
+                    <div class="video_wrap" style="width: fit-content;">
+                      <img src="assets/images/html_textformatting.png">
                     </div>
                   </div>
-                  <p>
-                    Nunc mattis enim ut tellus elementum sagittis vitae. Nisi lacus sed viverra tellus in hac. Amet dictum sit amet justo donec enim diam. Morbi non arcu risus quis varius quam quisque id. Mi eget mauris pharetra et ultrices neque. Natoque penatibus et magnis dis parturient montes nascetur.
-                  </p>
-                  <p>
-                    Elit ullamcorper dignissim cras tincidunt lobortis feugiat. Vitae sapien pellentesque habitant morbi tristique senectus et netus.
-                  </p>
-                  <a class="btn border_dark btn_small" href="#!">
-                    <span>
-                      <small><img src="assets/images/icon/icon_clip.svg" alt="Collab – Online Learning Platform"> Resources</small>
-                      <small><img src="assets/images/icon/icon_clip_white.svg" alt="Collab – Online Learning Platform"> Resources</small>
-                    </span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col col-lg-4">
-                <div class="accordion style_2" id="corse_details_accordion">
-                  <div class="accordion-item">
-                    <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_one" aria-expanded="true">
-                      Section 1. Python Express Course
-                    </div>
-                    <div id="collapse_one" class="accordion-collapse collapse show" data-bs-parent="#corse_details_accordion">
-                      <div class="accordion-body">
-                        <p class="completed_progress"><span>1/4</span> Completed</p>
-                        <div class="checkbox_item">
-                          <input id="checkbox_1_1" type="checkbox" checked>
-                          <label for="checkbox_1_1">1. Basic Python Syntax introduction</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_1_2" type="checkbox">
-                          <label for="checkbox_1_2">2. Expressions, Numbers, and Type Conversions</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_1_3" type="checkbox">
-                          <label for="checkbox_1_3">3. Morbi Non Arcu Risus Numbers Varius Quam</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_1_4" type="checkbox">
-                          <label for="checkbox_1_4">4. Branching with if Statements</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_two" aria-expanded="false">
-                      Section 2. Introduction to Loops
-                    </div>
-                    <div id="collapse_two" class="accordion-collapse collapse" data-bs-parent="#corse_details_accordion">
-                      <div class="accordion-body">
-                        <p class="completed_progress"><span>1/4</span> Completed</p>
-                        <div class="checkbox_item">
-                          <input id="checkbox_2_1" type="checkbox" checked>
-                          <label for="checkbox_2_1">1. Basic Python Syntax introduction</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_2_2" type="checkbox">
-                          <label for="checkbox_2_2">2. Expressions, Numbers, and Type Conversions</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_2_3" type="checkbox">
-                          <label for="checkbox_2_3">3. Morbi Non Arcu Risus Numbers Varius Quam</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_2_4" type="checkbox">
-                          <label for="checkbox_2_4">4. Branching with if Statements</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse_three" aria-expanded="false">
-                      Section 3. Strings, Lists and Dictionaries
-                    </div>
-                    <div id="collapse_three" class="accordion-collapse collapse" data-bs-parent="#corse_details_accordion">
-                      <div class="accordion-body">
-                        <p class="completed_progress"><span>1/4</span> Completed</p>
-                        <div class="checkbox_item">
-                          <input id="checkbox_3_1" type="checkbox" checked>
-                          <label for="checkbox_3_1">1. Basic Python Syntax introduction</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_3_2" type="checkbox">
-                          <label for="checkbox_3_2">2. Expressions, Numbers, and Type Conversions</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_3_3" type="checkbox">
-                          <label for="checkbox_3_3">3. Morbi Non Arcu Risus Numbers Varius Quam</label>
-                        </div>
-                        <div class="checkbox_item">
-                          <input id="checkbox_3_4" type="checkbox">
-                          <label for="checkbox_3_4">4. Branching with if Statements</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -355,65 +261,13 @@
         <!-- Course Details Section - End
         ================================================== -->
 
-        <!-- Course Deals Section - Start
-        ================================================== -->
-        <section class="course_deals_section section_space_lg bg_light decoration_wrap overflow-hidden">
-          <div class="container">
-            <div class="row align-items-center justify-content-lg-between">
-              <div class="col col-lg-5 order-lg-last">
-                <div class="image_widget">
-                  <img src="assets/images/about/about_image_5.jpg" alt="Collab – Online Learning Platform">
-                </div>
-              </div>
-              <div class="col col-lg-6">
-                <div class="content_wrap">
-                  <div class="section_heading">
-                    <h2 class="heading_text">
-                      Data Warehouse Concepts, Design, and Data Integration
-                    </h2>
-                    <p class="heading_description mb-0">
-                      Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Consectetur purus ut faucibus pulvinar elementum
-                    </p>
-                  </div>
-                  <div class="deals_countdown">
-                    <ul class="countdown_timer unordered_list" data-countdown="2023/12/31"></ul>
-                    <div class="discount_value">
-                      <strong>40%</strong>
-                      <span>Sale</span>
-                    </div>
-                  </div>
-                  <div class="btn_wrap pb-0">
-                    <a class="btn border_dark" href="course.html">
-                      <span>
-                        <small>Explore Courses</small>
-                        <small>Explore Courses</small>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="deco_item shape_img_1" data-parallax='{"y" : 130, "smoothness": 6}'>
-            <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-          </div>
-          <div class="deco_item shape_img_2" data-parallax='{"x" : -130, "smoothness": 6}'>
-            <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-          </div>
-          <div class="deco_item shape_img_3" data-parallax='{"y" : -130, "smoothness": 6}'>
-            <img src="assets/images/shape/shape_img_7.png" alt="Collab – Online Learning Platform">
-          </div>
-        </section>
-        <!-- Course Deals Section - End
-        ================================================== -->
-
         <!-- Courses Section - Start
         ================================================== -->
         <section class="courses_section section_space_lg">
           <div class="container">
             <div class="section_heading text-center">
               <h2 class="heading_text mb-0">
-                Students Also Bought
+                Materi Lainnya
               </h2>
             </div>
 
@@ -562,40 +416,6 @@
         <!-- Courses Section - End
         ================================================== -->
 
-        <!-- Newslatter Section - Start
-        ================================================== -->
-        <section class="newslatter_section">
-          <div class="container">
-            <div class="newslatter_box" style="background-image: url('assets/images/shape/shape_img_6.svg');">
-              <div class="row justify-content-center">
-                <div class="col col-lg-6">
-                  <div class="section_heading text-center">
-                    <h2 class="heading_text">
-                      Subscribe Now Forget 20% Discount Every Courses
-                    </h2>
-                    <p class="heading_description mb-0">
-                      Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed magna purus, fermentum eu
-                    </p>
-                  </div>
-                  <form action="#">
-                    <div class="form_item m-0">
-                      <input type="email" name="email" placeholder="Your Email">
-                      <button type="submit" class="btn btn_dark">
-                        <span>
-                          <small>Subsctibe</small>
-                          <small>Subsctibe</small>
-                        </span>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Newslatter Section - End
-        ================================================== -->
-
       </main>
       <!-- Main Body - End
       ================================================== -->
@@ -603,192 +423,12 @@
       <!-- Site Footer - Start
       ================================================== -->
       <footer class="site_footer">
-        <div class="footer_widget_area">
-          <div class="container">
-            <div class="row">
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="footer_widget">
-                  <div class="site_logo">
-                    <a class="site_link" href="index.html">
-                      <img src="assets/images/logo/site_logo_2.svg" alt="Collab - Online Learning Platform">
-                    </a>
-                  </div>
-                  <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                  </p>
-                  <ul class="social_links unordered_list">
-                    <li>
-                      <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a href="#!"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li>
-                      <a href="#!"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col col-lg-6">
-                <div class="row">
-                  <div class="col col-md-4 col-sm-4">
-                    <div class="footer_widget">
-                      <h3 class="footer_widget_title">Links</h3>
-                      <ul class="page_list unordered_list_block">
-                        <li>
-                          <a href="about.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">About</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="course.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Courses</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="mentor.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Mentors</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="pricing.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Prices</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="event.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Events</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col col-md-4 col-sm-4">
-                    <div class="footer_widget">
-                      <h3 class="footer_widget_title">Class</h3>
-                      <ul class="page_list unordered_list_block">
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Programming</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Art & Design</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Business</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Engineering</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Photography</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col col-md-4 col-sm-4">
-                    <div class="footer_widget">
-                      <h3 class="footer_widget_title">Support</h3>
-                      <ul class="page_list unordered_list_block">
-                        <li>
-                          <a href="contact.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Help Center</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="faq.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">FAQ</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="contact.html">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Contacts</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Security</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#!">
-                            <span class="item_icon"><i class="fas fa-caret-right"></i></span>
-                            <span class="item_text">Private Police</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-lg-3 col-md-6 col-sm-6">
-                <div class="footer_widget">
-                  <h3 class="footer_widget_title">Latest Posts</h3>
-                  <ul class="blog_small_group unordered_list_block">
-                    <li>
-                      <a class="blog_small" href="blog_details.html">
-                        <span class="item_image">
-                          <img src="assets/images/blog/blog_small_img_1.jpg" alt="Collab – Online Learning Platform">
-                        </span>
-                        <span class="item_content">
-                          <span class="item_author"><i class="fas fa-user-alt"></i> by Corabelle Durrad</span>
-                          <strong class="item_title">See How Michaele Built a New Life and Career</strong>
-                          <small class="item_post_date">October 12, 2023</small>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="blog_small" href="blog_details.html">
-                        <span class="item_image">
-                          <img src="assets/images/blog/blog_small_img_2.jpg" alt="Collab – Online Learning Platform">
-                        </span>
-                        <span class="item_content">
-                          <span class="item_author"><i class="fas fa-user-alt"></i> by Corabelle Durrad</span>
-                          <strong class="item_title">See How Michaele Built a New Life and Career</strong>
-                          <small class="item_post_date">October 12, 2023</small>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="copyright_widget">
-          <div class="container">
-            <p class="copyright_text text-center mb-0">
-              <a href="https://themeforest.net/user/merkulove">Merkulove</a> © <b>Collab</b> Template All rights reserved Copyrights 2023
-            </p>
-          </div>
-        </div>
-      </footer>
+				<div class="copyright_widget">
+					<div class="container">
+						<p class="copyright_text text-center mb-0"> © <b>Web Xplore</b> All Rights Reserved Copyrights 2023</p>
+					</div>
+				</div>
+			</footer>
       <!-- Site Footer - End
       ================================================== -->
 
