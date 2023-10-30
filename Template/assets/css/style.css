@@ -84,6 +84,7 @@ body {
   line-height: 1.65;
   font-style: normal;
   color: #29281E;
+  background-color: #FBFFE3;
   font-family: "Roboto", sans-serif;
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -163,13 +164,13 @@ button:focus {
   outline: none;
 }
 
-h1, h3, h4, h5, h6 {
+h1, h4, h5, h6 {
   font-weight: 700;
   color: #1F1D0D;
   font-family: "Barlow", sans-serif;
 }
 
-h2{
+h2, h3{
   color: #1B46A4;
 
 }
@@ -216,7 +217,6 @@ hr {
   display: flex;
   margin-bottom: 10px; /* Menambahkan jarak antara setiap elemen .row_html */
 }
-
 
 .col {
   -webkit-box-flex: unset;
@@ -717,8 +717,7 @@ ol[type="1"] > li:not(:last-child) {
 .tags_list.style_2 a {
   background-color: #F6F6F6;
 }
-
-.item_category_list {
+.item_category_list  a{
   overflow: hidden;
   border-radius: 8px;
 }
@@ -732,6 +731,22 @@ ol[type="1"] > li:not(:last-child) {
   text-transform: uppercase;
   font-family: "Barlow", sans-serif;
   background-color: #F6F6F6;
+}
+.item_category_list p {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.item_category_list p {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 7px 12px;
+  color: #FFFFFF;
+  /* border-radius: 25%; */
+  text-transform: uppercase;
+  font-family: "Barlow", sans-serif;
+  background-color: #E3028A;
 }
 .item_category_list a:hover {
   background-color: #C9E94A;
@@ -772,13 +787,15 @@ ol[type="1"] > li:not(:last-child) {
   margin-bottom: 40px;
   text-align: center;
 }
+
 .section_heading .heading_text {
   font-size: 45px;
   font-weight: 700;
   line-height: 50px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   color: #1B46A4;
 }
+
 .section_heading .heading_description {
   font-size: 16px;
   font-weight: 400;
@@ -1080,6 +1097,7 @@ blockquote p {
   overflow: hidden;
   position: relative;
   border-radius: 8px;
+  size-adjust: auto;
 }
 .intro_video .video_wrap .video_play_btn {
   top: 50%;
@@ -3462,7 +3480,6 @@ blockquote p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  border-top: 1px solid #ffffff;
 }
 .copyright_widget .copyright_text a {
   color: #ffffff;
@@ -3486,7 +3503,7 @@ blockquote p {
   padding: 70px 115px;
   background-size: 571px;
   background-repeat: no-repeat;
-  background-color: #F6F6F6;
+  background-color: #FBFFE3;
   background-position: right bottom;
 }
 .page_banner .container {
@@ -4077,6 +4094,35 @@ blockquote p {
 
 /* 5.4 - Register Pages - End
 ================================================== */
+
+/* CSS untuk CodeMirror */
+.CodeMirror {
+  font-family: Consolas, "Courier New", monospace; /* Ganti dengan font yang sesuai */
+  font-size: 14px; /* Ukuran font */
+  line-height: 1.4; /* Jarak baris */
+  height: 100%; /* Atur ketinggian editor sesuai kebutuhan Anda */
+  border: 1px solid #ddd; /* Tampilan garis tepi */
+}
+
+/* Tema warna untuk kode */
+.cm-s-default .cm-keyword { color: #007acc; } /* Warna kata kunci */
+.cm-s-default .cm-atom { color: #905; } /* Warna atom (misalnya, true, false) */
+.cm-s-default .cm-number { color: #905; } /* Warna angka */
+.cm-s-default .cm-def { color: #f0f; } /* Warna definisi */
+.cm-s-default .cm-variable { color: #e90; } /* Warna variabel */
+.cm-s-default .cm-operator { color: #9a6e3a; } /* Warna operator */
+.cm-s-default .cm-property { color: #905; } /* Warna properti */
+
+/* Warna latar belakang untuk tema gelap */
+.cm-s-default {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Warna untuk kode yang diseleksi */
+.CodeMirror-selected { background: #00356a; }
+.CodeMirror-focused .CodeMirror-selected { background: #00356a; }
+
 /*
 Responsive For Mobile & Tablet Devices
 ==================================================
