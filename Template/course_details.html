@@ -76,7 +76,7 @@
                 <ul class="main_menu_list unordered_list_center">
                   <li ><a href="indexlogin.html">Home</a></li>
                   <li class="active"><a href="course.html"><b></b>Courses</b></a></li>
-                  <li><a class="nav-link" href="challenges.html">Challenges</a></li>
+                  <li><a href="challenges.html">Challenges</a></li>
                 </ul>
               </div>
             </nav>
@@ -113,7 +113,7 @@
               <div class="row align-items-center">
                 <div class="col col-lg-7">
                   <ul class="breadcrumb_nav unordered_list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="indexlogin.html">Home</a></li>
                     <li><a href="course.html">Courses</a></li>
                     <li>HTML</li>
                   </ul>
@@ -123,7 +123,7 @@
                     </ul>
                   </div>
                   <h1 class="page_title">
-                    Belajar HTML #01: Text Formatting di HTML
+                    Belajar HTML #01: Struktur Dasar HTML
                   </h1>
                   <ul class="meta_info_list unordered_list">
                     <li>
@@ -150,7 +150,7 @@
 
         <!-- Courses Info Section - Start
         ================================================== -->
-        <section class="details_section motivation_banner courses_info_section section_space_md">
+        <!-- <section class="details_section motivation_banner courses_info_section section_space_md">
           <div class="container">
             <div class="row text-align-right d-flex align-items-center">
               <div class="col col-md-5">
@@ -221,7 +221,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Courses Info Section - End
         ================================================== -->
 
@@ -234,25 +234,55 @@
                 <div class="col-lg-10" style="padding: 10px; margin-left: 100px;">
                   <div class="section_heading">
                     <h2 class="heading_text">
-                      Membuat Teks Tebal
+                      Struktur Dasar HTML
                     </h2>
                   </div> 
                   <p>
-                    Teks tebal biasanya digunakan untuk memberikan penegasan pada teks tertentu, misalnya seperti judul, subjudul, huruf penting, dll.
+                    Hypertext Markup Language (HTML) adalah bahasa pemrograman yang digunakan untuk menampilkan sebuah website. HTML termasuk dalam bahasa pemrograman gratis, artinya tidak dimiliki oleh siapapun, pengembangannya dilakukan oleh banyak orang di banyak negara dan bisa dikatakan sebagai sebuah bahasa yang dikembangkan bersama-sama secara global.
                   </p>
                   <p>
-                    Tag yang digunakan untuk membuat teks tebal di HTML adalah tag (bold) dan tag (strong). Kamu bebas mau pakai yang mana saja, hasilnya akan sama-sama tebal.
+                    Dokumen HTML  dapat diedit oleh editor teks apapun. Dan disimpan dengan file extension .html . Dokumen HTML punya beberapa elemen yang dikelilingi oleh tag-teks yang dimulai dengan symbol “ &lt; ” dan berakhir dengan sebuah symbol “ &gt; ”.
                   </p>
-                  <div class="CodeMirror">
+                  <p>
+                    Elemen HTML dimulai dengan tag awal, yang diikuti dengan isi elemen dan tag akhir. Tag berakhir termasuk simbol / diikuti oleh tipe elemen, misalnya &lt;/head&gt;. Sebuah elemen HTML dapat bersarang di dalam elemen lainnya. Sebuah dokumen HTML standar terlihat seperti ini :
+                  </p>
+                  <!-- <div class="CodeMirror">
                     <textarea id="code-editor" ></div></textarea>
-                  </div>
-                  <p style="padding-top: 20px;">Hasilnya adalah : </p>
+                  </div> -->
+                  <!-- <p style="padding-top: 20px;">Hasilnya adalah : </p> -->
                   <div class="intro_video mb-4">
-                    <div class="video_wrap" style="width: fit-content;">
-                      <img src="assets/images/html_textformatting.png">
+                    <div class="video_wrap" style="width: fit-content; height: fit-content;">
+                      <img src="assets/images/strukturdasar_HTML.png">
                     </div>
                   </div>
-                 
+                  <p>
+                    Keterangan:
+                  </p>
+                  <ul>
+                    <li>
+                     Tag HTML secara default dimulai dari &lt;HTML&gt; dan diakhiri dengan &lt;/HTML&gt;.
+                    </li>
+                    <li>
+                      Tag &lt;HEAD&gt; … &lt;/HEAD&gt; merupakan tag kepala sebelum badan. Di dalam tag ini berisi tag &lt;META&gt; dan &lt;TITLE&gt;. Tag &lt;META&gt; merupakan informasi atau header suatu dokumen HTML. Atribut yang dimiliki oleh tag ini antara lain:
+                    </li>
+                    <ul>
+                      <li>
+                        HTTP_EQUIV, atribut ini berfungsi untuk menampilkan dokumen HTML secara otomatis dalam jangka waktu tertentu.
+                      </li>
+                      <li>
+                        CONTENT, atribut ini berisi informasi tentang isi document HTML yang akan dipanggil.
+                      </li>
+                      <li>
+                        NAME, atribut ini merupakan identifikasi dari meta itu sendiri. Tag &lt;META&gt; dalam suatu document HTML boleh ada maupun tidak.
+                      </li>
+                    </ul>
+                    <li>
+                      Tag &lt;TITLE&gt; … &lt/TITLE&gt; adalah tag judul. Sebaiknya setiap halaman web memiliki judul, dan judul tersebut dituliskan di dalam &lt;TITLE&gt; … &lt;/TITLE&gt;. Judul ini akan muncul dalam titlebar dari browser.
+                    </li>
+                    <li>
+                      Tag &lt;BODY&gt; … &lt;/BODY&gt; adalah tag berisi content dari suatu halaman web.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -263,7 +293,7 @@
 
         <!-- Courses Section - Start
         ================================================== -->
-        <section class="courses_section section_space_lg">
+        <section class="courses_section section_space_lg" style="padding-top: 25px;">
           <div class="container">
             <div class="section_heading text-center">
               <h2 class="heading_text mb-0">
