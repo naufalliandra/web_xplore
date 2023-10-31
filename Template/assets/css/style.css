@@ -1837,10 +1837,6 @@ blockquote p {
 	background-image: url(../images/bg_nelson_mandela.png);
 }
 
-.highlight_banner {
-	background-image: url(../images/texturebg.png);
-}
-
 .hero_banner .banner_small_title {
 	font-size: 13px;
 	font-weight: 700;
@@ -2427,7 +2423,11 @@ blockquote p {
 
 /* 3.3 - Course - End
 ================================================== */
-/* Highlight - Star */
+/* Highlight - Start */
+.highlight_banner {
+	background-image: url(../images/texturebg.png);
+}
+
 .highlight_item {
 	border-radius: 8px;
 	position: relative;
