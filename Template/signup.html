@@ -32,6 +32,13 @@
 
 		<!-- Custom - CSS Include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+		<script>
+			const token = localStorage.getItem("token");
+			if(token != null) {
+				window.location.href = "indexlogin.html";
+			}
+		</script>
 	</head>
 
 	<body>
@@ -98,20 +105,21 @@
 							<div class="col col-lg-5">
 								<h1 class="register_heading text-center">Create Account</h1>
 								<p class="register_heading_description text-center">Already have account? <a href="login.html">Login</a></p>
-								<form action="#">
+								<form action="#" id="form" >
 									<div class="register_form signup_login_form">
 										<div class="form_item">
-											<input type="email" name="email" placeholder="Email" />
+											<input type="email" name="email" placeholder="Email" id="email" />
 										</div>
 										<div class="form_item">
-											<input type="fullname" name="name" placeholder="Full Name" />
+											<input type="text" name="name" placeholder="Full Name" id="fullname"/>
 										</div>
 										<div class="form_item">
-											<input type="password" name="createpassword" placeholder="Create Password" />
+											<input type="password" name="createpassword" placeholder="Create Password" id="pass" />
 										</div>
 										<div class="form_item">
-											<input type="password" name="confirmpassword" placeholder="Confirm Password" />
+											<input type="password" name="confirmpassword" placeholder="Confirm Password" id="confirmpass"/>
 										</div>
+										<p id="text-error"></p>
 										<button type="submit" class="btn btn_dark mb-5">
 											<span>
 												<small>Signup Now</small>
@@ -371,5 +379,48 @@
 
 		<!-- Custom - Jquery Include -->
 		<script src="assets/js/main.js"></script>
+
+		<script>
+			// const url = 'http://localhost:3000/login'
+			const url = 'https://htmlcssbattle.vercel.app/register'
+			const form = document.getElementById("form");
+			form.addEventListener("submit", (e)=>{
+				e.preventDefault();
+				const email = document.getElementById("email").value;
+				const username = document.getElementById("fullname").value;
+				const password = document.getElementById("pass").value;
+				const conpass = document.getElementById("confirmpass").value;
+				const error = document.getElementById("text-error");
+
+				if(conpass !== password){
+					error.innerHTML = "Password tidak sama";
+					return;
+				}
+				fetch(url,{
+					method: "POST",
+					headers: {
+						Accept: "application/json, text/plain, */*",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						username,
+						email,
+						password
+					}),
+				}).then((res)=>{
+					console.log(res)
+					return res.json()
+				})
+				.then(async(res)=>{
+					await localStorage.setItem(
+						"token",
+						res.token
+					);
+					// window.location.href = "indexlogin.html";
+				}).catch((e)=>{
+					console.log(e)
+				})
+			})
+		</script>
 	</body>
 </html>
