@@ -32,6 +32,14 @@
 
 		<!-- Custom - CSS Include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+		<script>
+			const token = localStorage.getItem("token");
+			if(token != null) {
+				window.location.href = "indexlogin.html";
+			}
+		</script>
+		
 	</head>
 
 	<body>
@@ -98,24 +106,18 @@
 							<div class="col col-lg-5">
 							<h1 class="register_heading text-center">Account Login</h1>
 								<p class="register_heading_description text-center">Please enter your User/Email & Password</p>
-								<form action="#">
+								<form id="form" method="post" action="#">
 									<div class="register_form signup_login_form">
 										<div class="form_item">
-											<input type="email" name="email" placeholder="Username or Email" />
+											<input type="email" name="email" placeholder="Email" id="email" />
 										</div>
 										<div class="form_item">
-											<input type="password" name="password" placeholder="**********" />
+											<input type="password" name="password" placeholder="**********" id="pass" />
 										</div>
 										<div class="remenber_forget row mb-3 align-items-center justify-content-between">
-											<div class="col col-6">
-												<div class="checkbox_item mb-0">
-													<input id="checkbox_remenber" type="checkbox" />
-													<label for="checkbox_remenber">Remember me</label>
-												</div>
-											</div>
-											<div class="col col-6">
-												<div class="forget_password text-end">
-													<a href="#!">Forget Password</a>
+											<div class="col col-12">
+												<div class="text-start">
+													<p id="text-error"></p>
 												</div>
 											</div>
 										</div>
@@ -183,5 +185,43 @@
 
 		<!-- Custom - Jquery Include -->
 		<script src="assets/js/main.js"></script>
+		<script>
+			// const url = 'http://localhost:3000/login'
+			const url = 'https://htmlcssbattle.vercel.app/login'
+			const form = document.getElementById("form");
+			form.addEventListener("submit", (e)=>{
+				e.preventDefault();
+				const email = document.getElementById("email").value;
+				const password = document.getElementById("pass").value;
+				const error = document.getElementById("text-error");
+				fetch(url,{
+					method: "POST",
+					headers: {
+						Accept: "application/json, text/plain, */*",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						email,
+						password
+					}),
+				}).then((res)=>{
+					return res.json();
+				})
+				.then(async(res)=>{
+					console.log(res);
+					if(res?.token){
+						await localStorage.setItem(
+								"token",
+								res.token
+							);
+							window.location.href = "indexlogin.html";
+					}else{
+						error.innerHTML = "Password salah";
+					}
+				}).catch((e)=>{
+					console.log(e);
+				})
+			})
+		</script>
 	</body>
 </html>
