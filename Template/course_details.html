@@ -41,7 +41,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.js"></script>
 
-
+    <script>
+			const token = localStorage.getItem("token");
+			if(token == null) {
+				window.location.href = "login.html";
+			}
+		</script>
   </head>
 
 
@@ -108,21 +113,20 @@
         ================================================== -->
         <section class="page_banner">
           <div class="container">
-            <div class="content_wrapper" style="padding-top: -100px; padding-bottom: 100px;">
+            <div class="content_wrapper" style="padding-top: -100px; padding-bottom: 100px;" id="materi_container">
               <div class="row align-items-center">
                 <div class="col col-lg-7">
                   <ul class="breadcrumb_nav unordered_list">
                     <li><a href="indexlogin.html">Home</a></li>
                     <li><a href="course.html">Courses</a></li>
-                    <li>HTML</li>
+                    <li id="arrow">HTML</li>
                   </ul>
                   <div class="d-flex align-items-center justify-content-between mb-3">
                     <ul class="item_category_list unordered_list">
-                      <li><p href="#!">#HTML</p></li>
+                      <li><p href="#!" id="tag"></p></li>
                     </ul>
                   </div>
-                  <h1 class="page_title">
-                    Belajar HTML #01: Struktur Dasar HTML
+                  <h1 class="page_title" id="title">
                   </h1>
                   <ul class="meta_info_list unordered_list">
                     <li>
@@ -135,9 +139,9 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col col-lg-5" style="padding-top: -50px;">
-                  <div class="image_widget page_banner_image">
-                    <img src="assets/images/course/html.jpeg">
+                <div class="col col-lg-5" style="padding-top: -50px;padding-left: 100px;">
+                  <div class="image_widget page_banner_image" style="width: fit-content;">
+                    <img id="fotoCover">
                   </div>
                 </div>
               </div>
@@ -150,56 +154,19 @@
         <!-- Course Details Section - Start
         ================================================== -->
         <section class="details_section course_details_section">
-          <div class="container " style="padding-top: 50px; padding-bottom: 50px;">
+          <div class="container " style="padding-top: 50px; padding-bottom: 50px;" >
             <div class="row d-block">
               <div class="col-lg-15">
-                <div class="col-lg-10" style="padding: 10px; margin-left: 100px;">
+                <div class="col-lg-10" style="padding: 10px; margin-left: 100px;" id="materi_container">
                   <div class="section_heading">
-                    <h2 class="heading_text">
-                      Struktur Dasar HTML
+                    <h2 class="heading_text" id="heading_text">
                     </h2>
                   </div> 
-                  <p>
-                    Hypertext Markup Language (HTML) adalah bahasa pemrograman yang digunakan untuk menampilkan sebuah website. HTML termasuk dalam bahasa pemrograman gratis, artinya tidak dimiliki oleh siapapun, pengembangannya dilakukan oleh banyak orang di banyak negara dan bisa dikatakan sebagai sebuah bahasa yang dikembangkan bersama-sama secara global.
-                  </p>
-                  <p>
-                    Dokumen HTML  dapat diedit oleh editor teks apapun. Dan disimpan dengan file extension .html . Dokumen HTML punya beberapa elemen yang dikelilingi oleh tag-teks yang dimulai dengan symbol “ &lt; ” dan berakhir dengan sebuah symbol “ &gt; ”.
-                  </p>
-                  <p>
-                    Elemen HTML dimulai dengan tag awal, yang diikuti dengan isi elemen dan tag akhir. Tag berakhir termasuk simbol / diikuti oleh tipe elemen, misalnya &lt;/head&gt;. Sebuah elemen HTML dapat bersarang di dalam elemen lainnya. Sebuah dokumen HTML standar terlihat seperti ini :
+                  <p id="materi">
                   </p>
                   <div class="intro_video mb-4">
-                    <div class="video_wrap" style="width: fit-content; height: fit-content;">
-                      <img src="assets/images/strukturdasar_HTML.png">
-                    </div>
+                      <img id="fotoMateri">
                   </div>
-                  <p>
-                    Keterangan:
-                  </p>
-                  <ul>
-                    <li>
-                     Tag HTML secara default dimulai dari &lt;HTML&gt; dan diakhiri dengan &lt;/HTML&gt;.
-                    </li>
-                    <li>
-                      Tag &lt;HEAD&gt; … &lt;/HEAD&gt; merupakan tag kepala sebelum badan. Di dalam tag ini berisi tag &lt;META&gt; dan &lt;TITLE&gt;. Tag &lt;META&gt; merupakan informasi atau header suatu dokumen HTML. Atribut yang dimiliki oleh tag ini antara lain:
-                    </li>
-                    <ul>
-                      <li>
-                        HTTP_EQUIV, atribut ini berfungsi untuk menampilkan dokumen HTML secara otomatis dalam jangka waktu tertentu.
-                      </li>
-                      <li>
-                        CONTENT, atribut ini berisi informasi tentang isi document HTML yang akan dipanggil.
-                      </li>
-                      <li>
-                        NAME, atribut ini merupakan identifikasi dari meta itu sendiri. Tag &lt;META&gt; dalam suatu document HTML boleh ada maupun tidak.
-                      </li>
-                    </ul>
-                    <li>
-                      Tag &lt;TITLE&gt; … &lt/TITLE&gt; adalah tag judul. Sebaiknya setiap halaman web memiliki judul, dan judul tersebut dituliskan di dalam &lt;TITLE&gt; … &lt;/TITLE&gt;. Judul ini akan muncul dalam titlebar dari browser.
-                    </li>
-                    <li>
-                      Tag &lt;BODY&gt; … &lt;/BODY&gt; adalah tag berisi content dari suatu halaman web.
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -259,6 +226,36 @@
 
     <!-- Custom - Jquery Include -->
     <script src="assets/js/main.js"></script>
+    <script>
+
+    const url = 'https://htmlcssbattle.vercel.app/materi/'
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Mendapatkan jenis materi dan nama bab dari parameter URL
+    const namaID = urlParams.get("id");
+
+    fetch(url+namaID , {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${token}`,
+					},}).then((res)=>{
+				return res.json();
+			}).then((res)=>{
+        console.log(res);
+        document.getElementById("title").innerHTML = res.nama_bab
+        document.getElementById("arrow").innerHTML = res.jenis_materi
+        document.getElementById("tag").innerHTML = res.jenis_materi
+        document.getElementById("heading_text").innerHTML = res.nama_bab
+        document.getElementById("materi").innerHTML = res.materinya;
+        document.getElementById("fotoCover").src = res.foto_cover;
+        document.getElementById("fotoMateri").src = res.foto_materi[0];
+      })
+
+    // Cek apakah jenis materi adalah "CSS" dan nama bab sesuai dengan yang diberikan
+    
+
+    </script>
 
   </body>
 </html>
