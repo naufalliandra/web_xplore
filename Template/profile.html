@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Web Xplore</title>
-  <link rel="shortcut icon" href="assets/images/logo/logo_webXplore_nobg.svg" />
+		<title>Web Xplore</title>
+		<link
+			rel="shortcut icon"
+			href="assets/images/logo/logo_webXplore_nobg.svg"
+		/>
 
 		<!-- Framework - CSS Include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/css/bootstrap.min.css"
+		/>
 
 		<!-- Icon Font - CSS Include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css" />
@@ -25,40 +31,60 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
 
 		<!-- Video & Image Popup - CSS Include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/css/magnific-popup.css"
+		/>
 
 		<!-- Vanilla Calendar - CSS Include -->
-		<link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/css/vanilla-calendar.min.css"
+		/>
 
-        <!-- Template Main CSS File -->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-</head>
+		<!-- Template Main CSS File -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+		<script>
+			const token = localStorage.getItem("token");
+			if (token == null) {
+				window.location.href = "login.html";
+			}
+		</script>
+	</head>
 
-<body>
-    <!-- Body Wrap - Start -->
-	<div class="page_wrapper">
-        <!-- Back To Top - Start -->
-		<div class="backtotop">
-			<a href="#" class="scroll">
-				<i class="far fa-arrow-up"></i>
-			</a>
-		</div>
-		<!-- Back To Top - End -->
+	<body>
+		<!-- Body Wrap - Start -->
+		<div class="page_wrapper">
+			<!-- Back To Top - Start -->
+			<div class="backtotop">
+				<a href="#" class="scroll">
+					<i class="far fa-arrow-up"></i>
+				</a>
+			</div>
+			<!-- Back To Top - End -->
 
-        <!-- Site Header - Start ================================================== -->
+			<!-- Site Header - Start ================================================== -->
 			<header class="site_header site_header_1">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col col-lg-3 col-5">
 							<div class="site_logo">
 								<a class="site_link" href="indexlogin.html">
-									<img src="assets/images/logo/logo_webXplore_nobg.svg" alt="Collab - Online Learning Platform" />
+									<img
+										src="assets/images/logo/logo_webXplore_nobg.svg"
+										alt="Collab - Online Learning Platform"
+									/>
 								</a>
 							</div>
 						</div>
 						<div class="col col-lg-6 col-2">
 							<nav class="main_menu navbar navbar-expand-lg">
-								<div class="main_menu_inner collapse navbar-collapse justify-content-center" id="main_menu_dropdown">
+								<div
+									class="main_menu_inner collapse navbar-collapse justify-content-center"
+									id="main_menu_dropdown"
+								>
 									<ul class="main_menu_list unordered_list_center">
 										<li><a href="indexlogin.html">Home</a></li>
 										<li><a href="course.html">Courses</a></li>
@@ -69,7 +95,15 @@
 						<div class="col col-lg-3 col-5">
 							<ul class="header_btns_group unordered_list_end">
 								<li>
-									<button class="mobile_menu_btn" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu_dropdown" aria-controls="main_menu_dropdown" aria-expanded="false" aria-label="Toggle navigation">
+									<button
+										class="mobile_menu_btn"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#main_menu_dropdown"
+										aria-controls="main_menu_dropdown"
+										aria-expanded="false"
+										aria-label="Toggle navigation"
+									>
 										<i class="far fa-bars"></i>
 									</button>
 								</li>
@@ -79,230 +113,272 @@
 									</a>
 								</li>
 							</ul>
-						</div>						
+						</div>
 					</div>
 				</div>
 			</header>
-		<!-- Site Header - End ================================================== -->
+			<!-- Site Header - End ================================================== -->
 
-<main id="main" class="main">
+			<main id="main" class="main">
+				<div class="col col-lg-5">
+					<h2>Profile</h2>
+					<nav>
+						<ol class="breadcrumb_nav unordered_list">
+							<li><a href="indexlogin.html">Home</a></li>
+							<li>Profile</li>
+						</ol>
+					</nav>
+				</div>
+				<!-- End Page Title -->
 
-    <div class="col col-lg-5">
-      <h2>Profile</h2>
-      <nav>
-        <ol class="breadcrumb_nav unordered_list">
-          <li><a href="indexlogin.html">Home</a></li>
-          <li>Profile</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
+				<section class="section profile">
+					<div class="row">
+						<div class="col col-xl-4">
+							<div class="container">
+								<div
+									class="col profile-card pt-4 d-flex flex-column align-items-center"
+									style="background-color: #ffffff"
+								>
+									<img alt="Profile" class="rounded-circle" id="fotoProfile" />
+									<h2 id="name"></h2>
+								</div>
+							</div>
+						</div>
 
-    <section class="section profile">
-      <div class="row">
-        <div class="col col-xl-4">
+						<div class="col-xl-8">
+							<div class="container" style="padding-bottom: 50px">
+								<div
+									class="col col-lg-10 pt-3"
+									style="background-color: #ffffff"
+								>
+									<!-- Bordered Tabs -->
+									<ul class="nav nav-tabs nav-tabs-bordered">
+										<li class="nav-item">
+											<button
+												class="nav-link active"
+												data-bs-toggle="tab"
+												data-bs-target="#profile-overview"
+												aria-selected="true"
+												role="tab"
+											>
+												Overview
+											</button>
+										</li>
 
-          <div class="container">
-            <div class="col profile-card pt-4 d-flex flex-column align-items-center" style="background-color: #ffffff;">
+										<li class="nav-item">
+											<button
+												class="nav-link"
+												data-bs-toggle="tab"
+												data-bs-target="#profile-edit"
+												aria-selected="false"
+												role="tab"
+											>
+												Edit Profile
+											</button>
+										</li>
+									</ul>
+									<div class="tab-content pt-2">
+										<div
+											class="tab-pane fade show active profile-overview"
+											id="profile-overview"
+											role="tabpanel"
+										>
+											<h5 class="card-title">About</h5>
+											<p class="small fst-italic" id="about"></p>
 
-              <img src="assets/images/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
-            </div>
-          </div>
+											<h5 class="card-title">Profile Details</h5>
 
-        </div>
+											<div class="row">
+												<div class="col-lg-3 col-md-4 label">Full Name</div>
+												<div class="col-lg-9 col-md-8" id="fullName"></div>
+											</div>
 
-        <div class="col-xl-8">
+											<div class="row">
+												<div class="col-lg-3 col-md-4 label">Alamat</div>
+												<div class="col-lg-9 col-md-8" id="alamat"></div>
+											</div>
+											<div class="row">
+												<div class="col-lg-3 col-md-4 label">Phone</div>
+												<div class="col-lg-9 col-md-8" id="phone"></div>
+											</div>
 
-          <div class="container" style="padding-bottom: 50px;">
-            <div class="col col-lg-10 pt-3" style="background-color: #ffffff; ">
-              <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
+											<div class="row">
+												<div class="col-lg-3 col-md-4 label">Email</div>
+												<div class="col-lg-9 col-md-8" id="email"></div>
+											</div>
+										</div>
 
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview" aria-selected="true" role="tab">Overview</button>
-                </li>
+										<div
+											class="tab-pane fade profile-edit pt-3"
+											id="profile-edit"
+											role="tabpanel"
+										>
+											<!-- Profile Edit Form -->
+											<form id="formEdit">
+												<div class="row mb-3">
+													<label
+														for="about"
+														class="col-md-4 col-lg-3 col-form-label"
+														>About</label
+													>
+													<div class="col-md-8 col-lg-9">
+														<textarea
+															name="about"
+															class="form-control"
+															id="inputAbout"
+															style="height: 100px"
+														></textarea>
+													</div>
+												</div>
+												<div class="row mb-3">
+													<label
+														for="inputAlamat"
+														class="col-md-4 col-lg-3 col-form-label"
+														>Alamat</label
+													>
+													<div class="col-md-8 col-lg-9">
+														<input
+															name="inputAlamat"
+															type="text"
+															class="form-control"
+															id="inputAlamat"
+														/>
+													</div>
+												</div>
 
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit" aria-selected="false" role="tab">Edit Profile</button>
-                </li>
+												<div class="row mb-3">
+													<label
+														for="Phone"
+														class="col-md-4 col-lg-3 col-form-label"
+														>Phone</label
+													>
+													<div class="col-md-8 col-lg-9">
+														<input
+															name="phone"
+															type="text"
+															class="form-control"
+															id="inputPhone"
+															value="(436) 486-3538 x29071"
+														/>
+													</div>
+												</div>
 
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password" aria-selected="false" role="tab">Change Password</button>
-                </li>
+												<div class="text-center">
+													<button type="submit" class="btn btn-primary">
+														Save Changes
+													</button>
+												</div>
+											</form>
+											<!-- End Profile Edit Form -->
+										</div>
+									</div>
+									<!-- End Bordered Tabs -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<!-- End #main -->
 
-              </ul>
-              <div class="tab-content pt-2">
+			<!-- ======= Footer ======= -->
+			<footer class="site_footer">
+				<div class="copyright_widget">
+					<div class="container">
+						<p class="copyright_text text-center mb-0 text-white-100">
+							© <b>Web Xplore</b> All Rights Reserved Copyrights 2023
+						</p>
+					</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+		</div>
 
-                <div class="tab-pane fade show active profile-overview" id="profile-overview" role="tabpanel">
-                  <h5 class="card-title">About</h5>
-                  <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+		<a
+			href="#"
+			class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
 
-                  <h5 class="card-title">Profile Details</h5>
+		<!-- Vendor JS Files -->
+		<script src="assets/js/bootstrap.min.js"></script>
 
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
-                  </div>
+		<!-- JQuery FIles -->
+		<script src="assets/js/jquery.min.js"></script>
 
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
-                  </div>
+		<!-- Carousel - Jquery Include -->
+		<script src="assets/js/slick.min.js"></script>
 
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
-                  </div>
+		<!-- Video & Image Popup - Jquery Include -->
+		<script src="assets/js/magnific-popup.min.js"></script>
 
-                </div>
-                
-                <div class="tab-pane fade profile-edit pt-3" id="profile-edit" role="tabpanel">
+		<!-- Counter Up - Jquery Include -->
+		<script src="assets/js/waypoint.js"></script>
+		<script src="assets/js/counterup.min.js"></script>
 
-                  <!-- Profile Edit Form -->
-                  <form>
-                    <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <div class="col-md-8 col-lg-9">
-                        <img src="assets/images/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i>Upload</a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i>Delete</a>
-                        </div>
-                      </div>
-                    </div>
+		<!-- Countdown Timer - jquery include -->
+		<script src="assets/js/countdown.js"></script>
 
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
-                      </div>
-                    </div>
+		<!-- Vanilla Calendar - Jquery Include -->
+		<script src="assets/js/vanilla-calendar.min.js"></script>
 
-                    <div class="row mb-3">
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-                      <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
-                      </div>
-                    </div>
+		<!-- Template Main JS File -->
+		<script src="assets/js/main.js"></script>
+		<script>
+			const url = "https://htmlcssbattle.vercel.app/profile";
+			const inputPhone = document.getElementById("inputPhone");
+			const inputAbout = document.getElementById("inputAbout");
+			const inputAlamat = document.getElementById("inputAlamat");
+			const formEdit = document.getElementById("formEdit");
 
-                    <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
-                    </div>
+			const profile = async () => {
+				const response = await fetch(url, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${token}`,
+					},
+				});
+				const data = await response.json();
+				console.log(data);
+				document.getElementById("fullName").innerHTML = data.username;
+				document.getElementById("name").innerHTML = data.username.toUpperCase();
+				document.getElementById("about").innerHTML = data.about;
+				document.getElementById("alamat").innerHTML = data.alamat;
+				document.getElementById("phone").innerHTML = data.notelp;
+				document.getElementById("email").innerHTML = data.email;
+				document.getElementById("fotoProfile").src = data.foto;
 
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
-                      </div>
-                    </div>
+				inputPhone.value = data.notelp;
+				inputAbout.value = data.about;
+				inputAlamat.value = data.alamat;
+			};
+			profile();
 
-                    <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End Profile Edit Form -->
-
-                </div>
-
-                <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="password" type="password" class="form-control" id="currentPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Change Password</button>
-                    </div>
-                  </form><!-- End Change Password Form -->
-
-                </div>
-
-              </div><!-- End Bordered Tabs -->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-    <footer class="site_footer">
-        <div class="copyright_widget">
-            <div class="container">
-                <p class="copyright_text text-center mb-0 text-white-100"> © <b>Web Xplore</b> All Rights Reserved Copyrights 2023</p>
-            </div>
-        </div>
-    </footer>
-  <!-- End Footer -->
-</div>
-
-  
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/js/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/chart.js/chart.umd.js"></script>
-  <script src="assets/js/echarts/echarts.min.js"></script>
-
-  <!-- Carousel - Jquery Include -->
-  <script src="assets/js/slick.min.js"></script>
-
-  <!-- Video & Image Popup - Jquery Include -->
-  <script src="assets/js/magnific-popup.min.js"></script>
-
-  <!-- Counter Up - Jquery Include -->
-  <script src="assets/js/waypoint.js"></script>
-  <script src="assets/js/counterup.min.js"></script>
-
-  <!-- Countdown Timer - jquery include -->
-  <script src="assets/js/countdown.js"></script>
-
-  <!-- Vanilla Calendar - Jquery Include -->
-  <script src="assets/js/vanilla-calendar.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+			formEdit.addEventListener("submit", (e) => {
+				e.preventDefault();
+				fetch(url, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${token}`,
+					},
+					body: JSON.stringify({
+						about: inputAbout.value,
+						alamat: inputAlamat.value,
+						notelp: inputPhone.value,
+					}),
+				})
+					.then((res) => {
+						return res.json();
+					})
+					.then((res) => {
+						window.location.reload();
+					})
+					.catch((e) => {
+						console.log(e);
+					});
+			});
+		</script>
+	</body>
 </html>

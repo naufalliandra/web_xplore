@@ -32,6 +32,13 @@
 
 		<!-- Custom - CSS Include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+		<script>
+			const token = localStorage.getItem("token");
+			if(token == null) {
+				window.location.href = "login.html";
+			}
+		</script>
 	</head>
 
 	<body>
@@ -100,7 +107,7 @@
 										<li>Courses</li>
 									</ul>
 									<h1 class="page_title">Courses</h1>
-									<p class="page_description">Materi Ajar ini akan membantumu untuk menjelajahi dunia HTML, CSS, dan juga JavaScript. Kamu bisa mempelajari materi yang diperlukan dan diinginikan secara bebas. Setelah membaca materi tersebut, maka kamu bisa mengerjakan latihan soal dari materi terkait..</p>
+									<p class="page_description">Materi Ajar ini akan membantumu untuk menjelajahi dunia HTML, CSS, dan juga JavaScript. Kamu bisa mempelajari materi yang diperlukan dan diinginikan secara bebas. Setelah membaca materi tersebut, maka kamu bisa mengerjakan latihan soal dari materi terkait.</p>
 								</div>
 							</div>
 						</div>
@@ -246,9 +253,9 @@
 											</ul>
 										</div>
 										<h3 class="item_title">
-											<a href="course_details.html"> ${element.nama_bab}</a>
+											<a href="course_details.html?id=${element.id}"> ${element.nama_bab}</a>
 										</h3>
-										<a class="btn_unfill" href="course_details.html">
+										<a class="btn_unfill" href="course_details.html?id=${element.id}">
 											<span class="btn_text">View Course</span>
 											<span class="btn_icon">
 												<i class="fas fa-long-arrow-right"></i>
@@ -276,9 +283,9 @@
 											</ul>
 										</div>
 										<h3 class="item_title">
-											<a href="course_details.html"> ${element.nama_bab}</a>
+											<a href="course_details.html?id=${element.id}"> ${element.nama_bab}</a>
 										</h3>
-										<a class="btn_unfill" href="course_details.html">
+										<a class="btn_unfill" href="course_details.html?id=${element.id}">
 											<span class="btn_text">View Course</span>
 											<span class="btn_icon">
 												<i class="fas fa-long-arrow-right"></i>
@@ -306,9 +313,9 @@
 											</ul>
 										</div>
 										<h3 class="item_title">
-											<a href="course_details.html"> ${element.nama_bab}</a>
+											<a href="course_details.html?id=${element.id}"> ${element.nama_bab}</a>
 										</h3>
-										<a class="btn_unfill" href="course_details.html">
+										<a class="btn_unfill" href="course_details.html?id=${element.id}">
 											<span class="btn_text">View Course</span>
 											<span class="btn_icon">
 												<i class="fas fa-long-arrow-right"></i>
