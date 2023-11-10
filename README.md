@@ -31,13 +31,13 @@ https://web-xplore-orpin.vercel.app/
 # UI Kit
 | Color     | Hex     | 
 | ---       | ---     | 
-| Primary   | #0E5895 |
-| Secondary | #1669AD |
+| Primary   | #F05D0D |
+| Secondary | #FBFFE3 |
 | Neutral   | #FFFFFF |
 | Error     | #DC3545 |
 
 # Rancangan Basis Data
-Tabel Data Pasien
+Tabel Data Pengguna
 | No  | Nama Kolom | Tipe Data | Panjang Data | Contoh Data |
 |:--- | :---       | :---      | :---         | :---        |
 |1    | id         | int       | 11           | 1           |
@@ -84,7 +84,8 @@ Gunakan NIK data pasien berikut jika anda ingin mendaftar ke dalam faskes MedEas
 |11   | James Jones      | 9999999999     | 
 |12   | Sophia Harris    | 1010101010     | 
 
-# Pengembang Website MedEase (Medical Ease)
-  - Faishal Fariz Hidayatullah (215150607111014)
-  - Apriandhita Aries Prayoga  (215150607111019)
-  - Resty Cahyani Pradita      (215150601111016)
+# Pengembang Website Web Xplore
+  - Muhammad Naufalaudi Syaliandra (215150600111010)
+  - Ahmad Fahrezy Sanny            (215150600111002)
+  - Luvena Cornelia                (215150607111020)
+  - Jenita Ekka Istyadi            (215150607111021)
