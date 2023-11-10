@@ -5,26 +5,28 @@
   </a>
 </p>
 
-Web Xplore merupakan website pembelajaran pemrograman web
 
-Fitur-fitur yang tersedia pada website Web Xplore :
-- Pendaftaran
-  
-- Batal Daftar
-  
-  
-- Cek Antrian
-  
-  Pada fitur ini pasien dapat melakukan tindakan memeriksa atau mengkonfirmasi nomor urut pasien dalam antrian atau daftar tunggu di puskesmas atau fasilitas kesehatan.
-- Artikel
-  
-  Pada fitur ini pasien dapat membaca artikel kesehatan dan berita terupdate terkait dengan kesehatan.
-- About Us
-  
-  Pada fitur ini berisikan informasi tentang pengembang, tujuan, visi, dan misi dari Website MedEase.
+Web Xplore adalah sebuah platform pembelajaran pemrograman web yang fokus pada bahasa HTML, CSS, dan Javascript. Website ini menyediakan beragam materi pembelajaran untuk membantu individu memahami dan menguasai dasar-dasar pemrograman web. Dengan akses ke tutorial dan sumber daya gratis, Web Xplore memungkinkan pemula dan pengembang web yang berpengalaman untuk belajar dan meningkatkan keterampilan mereka dalam bahasa pemrograman web. Dengan fokus pada pendidikan, situs ini adalah sumber daya berharga bagi siapa saja yang tertarik untuk menjelajahi dunia pemrograman web.
 
 # Link Website
 https://web-xplore-orpin.vercel.app/
+
+# Fitur dan Cara Penggunaan
+- Pendaftaran Akun
+
+  Fitur ini merupakan langkah pertama yang harus diambil oleh pengguna yang ingin mengakses materi pembelajaran yang tersedia di website ini. Dengan fitur ini, pengguna dapat membuat akun pribadi dengan mengisi informasi, seperti email, nama lengkap, dan kata sandi.
+- Masuk
+  
+  Fitur ini merupakan langkah selanjutnya jika pengguna sudah memiliki akun. Pada fitur ini pengguna diminta memasukkan email dan kata sandi yang telah didaftarkan pada halaman pendaftaran sebelumnya. Setelah masuk, barulah pengguna akan mendapatkan akses untuk mengikuti seluruh materi pembelajaran yang tersedia di website ini.
+- Beranda
+  
+  Beranda adalah halaman awal yang memberikan gambaran umum tentang sumber daya dan materi pemrograman web yang tersedia di website ini. Pengguna akan menemukan informasi singkat mengenai fitur dan materi yang tersedia di website ini.
+- Kursus/Materi
+  
+  Fitur ini merupakan tempat di mana pengguna dapat menemukan beragam materi pemrograman web dengan deskripsi dan pilihan berdasarkan bahasa pemrogramannya.
+- Profil
+  
+  Fitur "Profil" di Web Xplore adalah tempat di mana pengguna dapat mengelola informasi pribadi pengguna, termasuk foto profil, nama lengkap, alamat, nomor telepon, dan alamat email. Dengan fitur "Edit Profile," pengguna memiliki kemampuan untuk memperbarui dan mempersonalisasi informasi ini sesuai kebutuhan.
 
 # UI Kit
 | Color     | Hex     | 
