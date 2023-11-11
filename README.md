@@ -8,10 +8,10 @@
 
 Web Xplore adalah sebuah platform pembelajaran pemrograman web yang fokus pada bahasa HTML, CSS, dan Javascript. Website ini menyediakan beragam materi pembelajaran untuk membantu individu memahami dan menguasai dasar-dasar pemrograman web. Dengan akses ke tutorial dan sumber daya gratis, Web Xplore memungkinkan pemula dan pengembang web yang berpengalaman untuk belajar dan meningkatkan keterampilan mereka dalam bahasa pemrograman web. Dengan fokus pada pendidikan, situs ini adalah sumber daya berharga bagi siapa saja yang tertarik untuk menjelajahi dunia pemrograman web.
 
-# Link Website
+## Link Website
 https://web-xplore-orpin.vercel.app/
 
-# Fitur dan Cara Penggunaan
+## Fitur dan Cara Penggunaan
 - Pendaftaran Akun
 
   Fitur ini merupakan langkah pertama yang harus diambil oleh pengguna yang ingin mengakses materi pembelajaran yang tersedia di website ini. Dengan fitur ini, pengguna dapat membuat akun pribadi dengan mengisi informasi, seperti email, nama lengkap, dan kata sandi.
@@ -28,7 +28,7 @@ https://web-xplore-orpin.vercel.app/
   
   Fitur "Profil" di Web Xplore adalah tempat di mana pengguna dapat mengelola informasi pribadi pengguna, termasuk foto profil, nama lengkap, alamat, nomor telepon, dan alamat email. Dengan fitur "Edit Profile," pengguna memiliki kemampuan untuk memperbarui dan mempersonalisasi informasi ini sesuai kebutuhan.
 
-# UI Kit
+## UI Kit
 | Color     | Hex     | 
 | ---       | ---     | 
 | Primary   | #F05D0D |
@@ -36,7 +36,7 @@ https://web-xplore-orpin.vercel.app/
 | Neutral   | #FFFFFF |
 | Error     | #DC3545 |
 
-# Rancangan Basis Data
+## Rancangan Basis Data
 Tabel Data Pengguna
 | No  | Nama Kolom | Tipe Data   | Contoh Data                |
 |:--- | :---       | :---        | :---                       |
@@ -58,18 +58,18 @@ Tabel Data Materi
 |3    | jenis_materi  | text      | 'CSS'               |
 |4    | nama_bab      | text      | 'Dasar-Dasar CSS    |
 |5    | materi        | text[]    | 'CSS merupakan ...' |
-|6    | foto_materi   | text[]    | '"https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/materi/materi/Dasar%20-%20Dasar%20CSS.png?t=2023-11-07T06%3A02%3A37.780Z"'     |
-|7    | foto_cover    | text      | 'https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/foto_cover/foto_cover/DASAR CSS/0'                                                  |
+|6    | foto_materi   | text[]    | '"https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/materi/materi/Dasar%20-%20Dasar%20CSS.png?t=2023-11-07T06%3A02%3A37.780Z"'                  |
+|7    | foto_cover    | text      | 'https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/foto_cover/foto_cover/DASAR CSS/0'                  |
 
-# Deployment
+## Deployment
 
 - Powered by Vercel
 
-# Database
+## Database
 
 Supabase.org versi 2.38.4 'https://supabase.com/'
 
-# Pengembang Website Web Xplore
+## Pengembang Website Web Xplore
   - Muhammad Naufalaudi Syaliandra (215150600111010)
   - Ahmad Fahrezy Sanny            (215150600111002)
   - Luvena Cornelia                (215150607111020)
