@@ -38,51 +38,36 @@ https://web-xplore-orpin.vercel.app/
 
 # Rancangan Basis Data
 Tabel Data Pengguna
-| No  | Nama Kolom | Tipe Data | Panjang Data | Contoh Data |
-|:--- | :---       | :---      | :---         | :---        |
-|1    | id         | int       | 11           | 1           |
-|2    | nama       | varchar   | 255          | 'Faishal'   |
-|3    | nik        | varchar   | 255          | '1234567890'|
+| No  | Nama Kolom | Tipe Data   | Contoh Data                |
+|:--- | :---       | :---        | :---                       |
+|1    | id         | int8        | 61                         |
+|2    | username   | text        | 'luve cornelia'            |
+|3    | email      | text        | 'cornelia.luvena@gmail.com'|
+|4    | about      | text        | 'Halo!'                    |
+|5    | foto       | text        |                            |
+|6    | password   | text        | '$2b$10$OxDA7Vnfms'        |
+|7    | notelp     | text        | '081238359329'             |
+|8    | alamat     | text        | 'Jl. Veteran'              |
+|9    | created_at | timestamptz | '2023-11-06'               |
 
-Tabel Data Pasiens(Daftar ke faskes)
-| No  | Nama Kolom    | Tipe Data | Panjang Data | Contoh Data         |
-|:--- | :---          | :---      | :---         | :---                |
-|1    | id            | int       | 11           | 24                  |
-|2    | poliklinik    | varchar   | 32           | '2'                 |
-|3    | tanggal       | date      | -            | 2023-10-30          |
-|4    | nomor_antrean | varchar   | 255          | '20231030005'       |
-|5    | nik           | varchar   | 32           | '1234567890'        |
-|6    | updated_at    | timestamp | -            | 2023-10-29 03:09:12 |
-|7    | cretaed_at    | time      | -            | 10:09:12            |
+Tabel Data Materi
+| No  | Nama Kolom    | Tipe Data | Contoh Data         |
+|:--- | :---          | :---      | :---                |
+|1    | id            | int8      | 33                  |
+|2    | created at    | date      | '2023-11-03'        |
+|3    | jenis_materi  | text      | 'CSS'               |
+|4    | nama_bab      | text      | 'Dasar-Dasar CSS    |
+|5    | materi        | text[]    | 'CSS merupakan ...' |
+|6    | foto_materi   | text[]    | '"https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/materi/materi/Dasar%20-%20Dasar%20CSS.png?t=2023-11-07T06%3A02%3A37.780Z"'     |
+|7    | foto_cover    | text      | 'https://wkewzdgfhqcwmrpdjnlv.supabase.co/storage/v1/object/public/foto_cover/foto_cover/DASAR CSS/0'                                                  |
 
-Tabel User
-| No  | Nama Kolom        | Tipe Data | Panjang Data | Contoh Data                 |
-|:--- | :---              | :---      | :---         | :---                        |
-|1    | id                | bigint    | 20           | 6                           |
-|2    | name              | varchar   | 255          | 'Apriandhita Aries Prayoga' |            
-|3    | email             | varchar   | 255          | 'apriandhitaaries@gmail.com'|
-|4    | email_verified_at | timestamp | -            | NULL                        |
-|5    | password          | varchar   | 255          | 'ghefirasm24'               |
-|6    | remeber_token     | varchar   | 100          | NULL                        |
-|7    | updated_at        | timestamp | -            | 2023-10-29 15:50:42         |
-|8    | cretaed_at        | timestamp | -            | 2023-10-29 15:50:42         |
+# Deployment
 
-# Data Pasien Untuk Mendaftar
-Gunakan NIK data pasien berikut jika anda ingin mendaftar ke dalam faskes MedEase:
-| Id  | Nama Pasien      | NIK            | 
-|:--- | :---             | :---           | 
-|1    | Faishal          | 1234567890     | 
-|2    | Resty            | 0987654321     | 
-|3    | John Doe         | 1111111111     | 
-|4    | Jane Doe         | 2222222222     | 
-|5    | Bob Smith        | 3333333333     | 
-|6    | Alice Johnson    | 4444444444     | 
-|7    | Michael Brown    | 5555555555     | 
-|8    | Emily Davis      | 6666666666     | 
-|9    | William Wilson   | 7777777777     | 
-|10   | Olivia Taylor    | 8888888888     | 
-|11   | James Jones      | 9999999999     | 
-|12   | Sophia Harris    | 1010101010     | 
+- Powered by Vercel
+
+# Database
+
+Supabase.org versi 2.38.4 'https://supabase.com/'
 
 # Pengembang Website Web Xplore
   - Muhammad Naufalaudi Syaliandra (215150600111010)
