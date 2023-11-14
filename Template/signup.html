@@ -35,7 +35,7 @@
 
 		<script>
 			const token = localStorage.getItem("token");
-			if(token != null) {
+			if(token != null && token) {
 				window.location.href = "indexlogin.html";
 			}
 		</script>
@@ -216,11 +216,7 @@
 					return res.json()
 				})
 				.then(async(res)=>{
-					await localStorage.setItem(
-						"token",
-						res.token
-					);
-					window.location.href = "indexlogin.html";
+					window.location.href = "/Template/login.html";
 				}).catch((e)=>{
 					console.log(e)
 				})
