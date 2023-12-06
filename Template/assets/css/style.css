@@ -482,6 +482,10 @@ hr {
 	color: #000000;
 	background-color: #ffb20d;
 }
+.btn_secondary{
+	background-color: #ff0000;
+	color: #ffffff;
+}
 .btn_primary:hover {
 	color: #1f1d0d;
 	-webkit-box-shadow: 0 8px 24px 0 rgba(247, 255, 98, 0.4);

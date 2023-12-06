@@ -206,6 +206,12 @@
 												<div class="col-lg-3 col-md-4 label">Email</div>
 												<div class="col-lg-9 col-md-8" id="email"></div>
 											</div>
+
+											<div class="text-center">
+												<button  id="hapusAkunBtn" class="btn btn_secondary">
+													Delete Account
+												</button>
+											</div>
 										</div>
 
 										<div
@@ -324,61 +330,86 @@
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>
+		
 		<script>
 			const url = "https://htmlcssbattle.vercel.app/profile";
 			const inputPhone = document.getElementById("inputPhone");
 			const inputAbout = document.getElementById("inputAbout");
 			const inputAlamat = document.getElementById("inputAlamat");
 			const formEdit = document.getElementById("formEdit");
-
+			const hapusAkunBtn = document.getElementById("hapusAkunBtn"); 
+			
 			const profile = async () => {
-				const response = await fetch(url, {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json",
-						Authorization: `Bearer ${token}`,
-					},
-				});
-				const data = await response.json();
-				console.log(data);
-				document.getElementById("fullName").innerHTML = data.username;
-				document.getElementById("name").innerHTML = data.username.toUpperCase();
-				document.getElementById("about").innerHTML = data.about;
-				document.getElementById("alamat").innerHTML = data.alamat;
-				document.getElementById("phone").innerHTML = data.notelp;
-				document.getElementById("email").innerHTML = data.email;
-				document.getElementById("fotoProfile").src = data.foto;
-
-				inputPhone.value = data.notelp;
-				inputAbout.value = data.about;
-				inputAlamat.value = data.alamat;
+			  const response = await fetch(url, {
+				method: "GET",
+				headers: {
+				  "Content-Type": "application/json",
+				  Authorization: `Bearer ${token}`,
+				},
+			  });
+			  const data = await response.json();
+			  console.log(data);
+			  document.getElementById("fullName").innerHTML = data.username;
+			  document.getElementById("name").innerHTML = data.username.toUpperCase();
+			  document.getElementById("about").innerHTML = data.about;
+			  document.getElementById("alamat").innerHTML = data.alamat;
+			  document.getElementById("phone").innerHTML = data.notelp;
+			  document.getElementById("email").innerHTML = data.email;
+			  document.getElementById("fotoProfile").src = data.foto;
+		  
+			  inputPhone.value = data.notelp;
+			  inputAbout.value = data.about;
+			  inputAlamat.value = data.alamat;
 			};
 			profile();
-
+		  
 			formEdit.addEventListener("submit", (e) => {
-				e.preventDefault();
-				fetch(url, {
-					method: "PUT",
-					headers: {
-						"Content-Type": "application/json",
-						Authorization: `Bearer ${token}`,
-					},
-					body: JSON.stringify({
-						about: inputAbout.value,
-						alamat: inputAlamat.value,
-						notelp: inputPhone.value,
-					}),
+			  e.preventDefault();
+			  fetch(url, {
+				method: "PUT",
+				headers: {
+				  "Content-Type": "application/json",
+				  Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+				  about: inputAbout.value,
+				  alamat: inputAlamat.value,
+				  notelp: inputPhone.value,
+				}),
+			  })
+				.then((res) => res.json())
+				.then((res) => {
+				  window.location.reload();
 				})
-					.then((res) => {
-						return res.json();
-					})
-					.then((res) => {
-						window.location.reload();
-					})
-					.catch((e) => {
-						console.log(e);
-					});
+				.catch((e) => {
+				  console.log(e);
+				});
 			});
-		</script>
+		  
+			hapusAkunBtn.addEventListener("click", async () => {
+
+			  try {
+				fetch(url,{
+				  method: "DELETE",
+				  headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				  },
+				}).then( (res) => {
+					console.log(res);
+					return res.json()
+				}).then( (res) => {
+					console.log("RES : ", res);
+					setTimeout(() => {
+						localStorage.clear()
+						window.location.href = "signup.html";
+					},500)
+				})
+				.catch((err) => console.log(err))
+			  } catch (error) {
+				console.error("Terjadi kesalahan:", error.message);
+			  }
+			});
+		  </script>		  
 	</body>
 </html>
